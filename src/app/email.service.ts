@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
-  private emailUrl = 'https://hasas3.hu/send-email'; // Update this to use the Nginx proxy
+  private emailUrl = 'https://hasas3.hu/send-email'; // Update with your server URL
 
   constructor(private http: HttpClient) {}
 
-  sendEmail(name: string, email: string, message: string): Observable<any> {
-    const data = { name, email, message };
-    return this.http.post(this.emailUrl, data);
+  sendEmailWithAttachment(formData: FormData): Observable<any> {
+    return this.http.post(this.emailUrl, formData);
   }
 }
