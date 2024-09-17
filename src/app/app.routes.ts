@@ -9,8 +9,8 @@ import { FormComponent } from './form/form.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent }, 
     { path: 'login', component: LoginComponent },  // Custom login page
-    { path: 'protected', component: ProtectedComponent, canActivate: [AuthGuard] }, 
-    { path: 'servers', component: ServersComponent, canActivate: [AuthGuard] }, 
+    { path: 'protected', component: ProtectedComponent }, 
+    { path: 'servers', component: ServersComponent}, 
     { path: 'form', component: FormComponent } ,
     { path: '**', redirectTo: '' } // Fallback route
   ];
