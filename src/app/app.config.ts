@@ -17,7 +17,7 @@ function initializeKeycloak(keycloak: KeycloakService) {
     // Browser environment: Initialize Keycloak
     return keycloak.init({
       config: {
-        url: 'https://keycloak.hasas3.hu/auth', // Your Keycloak URL
+        url: 'https://keycloak.hasas3.hu', // Your Keycloak URL
         realm: 'teszt',                         // Your realm name
         clientId: 'angular-app',                // Your client ID
       },

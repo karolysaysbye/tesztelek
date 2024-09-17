@@ -16,7 +16,7 @@ export class KeycloakInitService {
     // Keycloak initialization for browser environment
     return this.keycloak.init({
       config: {
-        url: 'https://keycloak.hasas3.hu/auth',  // Your Keycloak URL
+        url: 'https://keycloak.hasas3.hu',  // Your Keycloak URL
         realm: 'teszt',                      // Your realm name
         clientId: 'angular-app',                // Your client ID
       },
