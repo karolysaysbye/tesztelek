@@ -1,0 +1,19 @@
+<form (submit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+    </div>
+    <div>
+      <label for="message">Message:</label>
+      <textarea id="message" [(ngModel)]="formData.message" name="message" required></textarea>
+    </div>
+    <button type="submit">Send Email</button>
+  
+    <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+    <p *ngIf="successMessage" style="color: green;">{{ successMessage }}</p>
+  </form>
+  
