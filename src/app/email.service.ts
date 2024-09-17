@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
-  private emailUrl = 'https://hasas3.hu:3000/send-email'; // Replace with your actual domain and port
+  private emailUrl = 'https://hasas3.hu/send-email'; // Update this to use the Nginx proxy
 
   constructor(private http: HttpClient) {}
 
