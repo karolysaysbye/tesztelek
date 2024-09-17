@@ -1,0 +1,15 @@
+<div *ngIf="servers.length > 0">
+    <h2>Server List</h2>
+    <ul>
+      <li *ngFor="let server of servers">
+        <strong>{{ server.name }}</strong> (ID: {{ server.id }})
+        <p>Public IP: {{ server.public_net?.ipv4?.ip }}</p>
+        <p>Status: {{ server.status }}</p>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="servers.length === 0">
+    <p>No servers found or data is loading...</p>
+  </div>
+  
