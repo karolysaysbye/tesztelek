@@ -7,5 +7,5 @@ import { ServersComponent } from './servers/servers.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent }, 
     { path: 'protected', component: ProtectedComponent, canActivate: [AuthGuard] }, 
-    { path: 'servers', component: ServersComponent}, 
+    { path: 'servers', component: ServersComponent, canActivate: [AuthGuard] }, 
   ];
