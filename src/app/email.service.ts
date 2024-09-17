@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailService {
-  private emailUrl = 'http://localhost:3000/send-email'; // Email service URL
+  private emailUrl = 'https://hasas3.hu:3000/send-email'; // Replace with your actual domain and port
 
   constructor(private http: HttpClient) {}
 
